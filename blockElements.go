@@ -79,15 +79,11 @@ func (p PlainTextBlockElement) textContent() string {
 type MrkdwnBlockElement struct {
 	Type  BlockElementType `json:"type"`
 	Text  string           `json:"text"`
-	Parse string           `json:"parse"`
+	Parse bool             `json:"parse"`
 }
 
 // NewMrkdwnBlockElement creates a new plainText element
-func NewMrkdwnBlockElement(text string, parse bool) MrkdwnBlockElement {
-	shouldParse := "none"
-	if parse {
-		shouldParse = "full"
-	}
+func NewMrkdwnBlockElement(text string, shouldParse bool) MrkdwnBlockElement {
 	return MrkdwnBlockElement{
 		Type:  MrkdwnBlockElementType,
 		Text:  text,
