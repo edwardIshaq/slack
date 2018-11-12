@@ -94,6 +94,12 @@ func NewSectionBlockWithElement(text TextBlockElement, blockID string, element S
 	}
 }
 
+// AddElement adds the element to the SectionBlock
+func (s *SectionBlock) AddElement(element SectionBlockCompatibleElement) *SectionBlock {
+	s.Element = element
+	return s
+}
+
 // ActionBlock base block element
 type ActionBlock struct {
 	BaseBlock
