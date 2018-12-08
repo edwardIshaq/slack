@@ -78,8 +78,8 @@ func NewExternalSelectBlockElement() ExternalSelectBlockElement {
 // ConversationsSelectBlockElement a conversations select element
 type ConversationsSelectBlockElement struct {
 	BaseSelectBlockElement
-	InitialConversation *BlockSelectOption `json:"initial_conversation,omitempty"`
-	MinQueryLength      int                `json:"min_query_length,omitempty"`
+	InitialConversation string `json:"initial_conversation,omitempty"`
+	MinQueryLength      int    `json:"min_query_length,omitempty"`
 }
 
 // MakeConversationsSelectBlockElement prepares a new `ConversationsSelectBlockElement`
